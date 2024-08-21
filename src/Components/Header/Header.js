@@ -1,4 +1,3 @@
-// src/components/Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
@@ -6,7 +5,7 @@ import './Header.css';
 const Header = () => {
   return (
     <header className="header">
-      <h1>News App</h1>
+      <h1> News App </h1>
       <nav>
         <ul className="nav-links">
           <li><Link to="/category/technology">Technology</Link></li>
@@ -20,4 +19,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header
