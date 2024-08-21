@@ -1,5 +1,5 @@
 .header {
-    background-color: #333;
+  background: rgb(40, 40, 40 );
     color: white;
     text-align: center;
     padding: 1rem;
@@ -35,4 +35,6 @@
   .nav-links a:hover {
     text-decoration: underline;
   }
-  
+   
+
+   
