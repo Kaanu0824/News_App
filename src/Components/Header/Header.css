@@ -1,40 +1,111 @@
 .header {
-  background: rgb(40, 40, 40 );
-    color: white;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  nav {
-    margin-top: 1rem;
-  }
-  
-  .nav-links {
-    list-style-type: none;
-    font-size: 15px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-  }
-  
-  .nav-links li {
-    display: inline;
-  }
-  
-  .nav-links a {
-    color: yellow;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
-  
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-   
+  background: linear-gradient(90deg, rgb(145, 174, 215) 0%, rgb(56, 56, 56) 100%);
+  color: white;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-   
+h1 {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffeb3b;
+  text-decoration: none;
+}
+
+.nav-links a:active {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #fbc02d;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(58, 123, 213, 1);
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  .menu-button {
+    display: block;
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .menu-button {
+    font-size: 1.8rem;
+  }
+}
