@@ -67,8 +67,9 @@ h1 {
     flex-direction: column;
     position: absolute;
     top: 100%;
+    
     right: 0;
-    background: rgba(58, 123, 213, 1);
+    background: rgb(40, 40, 40 );
     width: 100%;
     padding: 1rem 0;
   }
