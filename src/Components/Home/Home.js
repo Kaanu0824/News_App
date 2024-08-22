@@ -11,9 +11,15 @@ const Home = () => {
 
   useEffect(() => {
     const apiKey = '0843699a879e4cd8a273abec4771aba6';
-    const url = category 
-      ? `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`
-      : `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+
+    let url;
+    if (category === 'bitcoin') {
+      url = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${apiKey}`;
+    } else {
+      url = category 
+        ? `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`
+        : `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+    }
 
     fetch(url)
       .then((response) => response.json())
@@ -40,11 +46,11 @@ const Home = () => {
     <div className="home">
       {news.map((article) => (
         <NewsItem 
-            key={article.url}
-            title={article.title}
-            description={article.description}
-            url={article.url}
-            urlToImage={article.urlToImage}
+          key={article.url}
+          title={article.title}
+          description={article.description}
+          url={article.url}
+          urlToImage={article.urlToImage}
         />
       ))}
     </div>

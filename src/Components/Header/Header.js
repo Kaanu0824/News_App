@@ -13,6 +13,7 @@ const Header = () => {
           <li><Link to="/category/health">Health</Link></li>
           <li><Link to="/category/sports">Sports</Link></li>
           <li><Link to="/category/entertainment">Entertainment</Link></li>
+          <li><Link to="/category/bitcoin">Bitcoin</Link></li>
         </ul>
       </nav>
     </header>
@@ -21,4 +22,3 @@ const Header = () => {
 };
 
 export default Header
-
