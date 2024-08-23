@@ -1,6 +1,6 @@
 .header {
-  /* background: linear-gradient(90deg, rgb(145, 174, 215) 0%, rgb(56, 56, 56) 100%); */
-  background: rgb(40, 40, 40 );
+  background: linear-gradient(90deg, rgb(111, 140, 180) 0%, rgb(56, 56, 56) 100%);
+  /* background: rgb(40, 40, 40 ); */
   color: white;
   padding: 1.5rem 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -9,9 +9,11 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.app{
+  color: rgb(244, 7, 7);
+  font-size: larger;
+}
 h1 {
-  margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   letter-spacing: 0.1rem;
